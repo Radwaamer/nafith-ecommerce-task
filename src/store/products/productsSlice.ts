@@ -45,11 +45,11 @@ export const productsSlice= createSlice({
         builder.addCase(actFilterProducts.pending, (state) => {
             state.loading = "pending";
             state.error = null;
-            state.records=[];
         });
         builder.addCase(actFilterProducts.fulfilled, (state, action) => {
             state.loading = "succeeded";
             state.records = action.payload;
+            // state.records = Array.isArray(action.meta.arg) && action.meta.arg.length>1 ? [...state.records,...action.payload]: action.payload
         });
         builder.addCase(actFilterProducts.rejected, (state, action) => {
             state.loading = "failed";

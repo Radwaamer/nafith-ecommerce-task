@@ -23,9 +23,9 @@ const Products = () => {
         if (!records.length && !filterRecords.length ) {
             dispatch(actGetProducts());
         }
-        if(filterRecords.length){
-            dispatch(actFilterProducts())
-        }
+        // if(filterRecords.length){
+        //     dispatch(actFilterProducts(filterRecords))
+        // }
     }, [dispatch, records, filterRecords]);
 
     const calcProducts= ()=>{
