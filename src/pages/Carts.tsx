@@ -9,7 +9,7 @@ const Carts = () => {
     const cartsList=cartRecords.length!=0?
     cartRecords.map(record=>{
         return(
-            <Cart key={record.id} {...record}/>
+            <Cart key={record.id} product={record}/>
         )
     })
     :"There Are No Products Yet"
